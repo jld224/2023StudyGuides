@@ -187,13 +187,23 @@ Disadvantages:
 - Introduces a controlled increase in complexity
 
 ### Encapsulation 
-*The bundling of data with the methods that operate on that data* Encapsulation is the process of wrapping data and functions in one unit. It helps to reduce complexity and promote the reusability of code. 
+*The bundling of data with the methods that operate on that data.* Encapsulation is the process of wrapping data and functions in one unit. It helps to reduce complexity and promote the reusability of code. 
 
 ### Information Hiding
-*Hide the internal representation, or state, of an object from the outside* Information Hiding is the process of hiding the implementation details of a class from the outside world. It helps to make code more maintainable and easier to understand.
+*Hide the internal representation, or state, of an object from the outside.* Information Hiding is the process of hiding the implementation details of a class from the outside world. It helps to make code more maintainable and easier to understand.
+
+Information Hiding Rules
+1. Don't expose data items
+- Make data members private
+- If access is needed externally to the class, use get and set methods for access
+2. Don't expose the difference between stored date and derived data
+- Derived data is data calculated from stored data
+- Don't reveal whether an attribute is stored or derived
+3. Don't expose implementation details of a class
+4. Don't expose a class' internal structure
 
 ### Dispatch 
 Dispatch is the process of deciding which function to call in a program. Static dispatch is when the decision is made at compile-time, while dynamic dispatch is when the decision is made at run-time. It is important to understand the differences between static and dynamic dispatch when deciding which approach to use in a program.
 
 ### Extra 
-vtable is a data structure used in object-oriented programming languages to store pointers to virtual functions. It is important to understand how vtables work in order to correctly implement and use virtual functions in a program.
+vtable is a data structure used in object-oriented programming languages to store pointers to virtual functions. When a class is defined in C++, the compiler creates a VTable for that class. The VTable contains a list of function pointers that point to the functions that are defined for that class. When an object is created from that class, a pointer to the VTable is included as a hidden member of the object. This pointer allows the object to make function calls through the VTable, which in turn resolves the function call at runtime.
